@@ -1,0 +1,62 @@
+{
+    "editor.fontSize": 14,
+    "editor.wordWrap": "on",
+    "terminal.integrated.fontSize": 13,
+    "workbench.iconTheme": "vscode-great-icons",
+    "code-runner.executorMap": {
+        "lua": "/usr/local/bin/luajit"
+    },
+    "editor.fontFamily": "SF Mono,Menlo, Monaco, 'Courier New', monospace",
+    "vsicons.dontShowNewVersionMessage": true,
+    "window.zoomLevel": 1,
+    "gitlens.keymap": "none",
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "gitlens.historyExplorer.enabled": true,
+    "files.autoGuessEncoding": true,
+    "files.associations": {
+        "*.wxa": "vue",
+        "*.wxp": "vue",
+        "*.wxc": "vue"
+    },
+    "files.maxMemoryForLargeFilesMB": 1024,
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "terminal.external.osxExec": "iTerm.app",
+    "editor.detectIndentation": false,
+    "workbench.colorTheme": "Community Material Theme",
+    "debug.console.fontSize": 13,
+    //go配置
+    "editor.formatOnSave": true,
+    "files.autoSave": "onFocusChange",
+    "go.useLanguageServer": true,
+    "go.autocompleteUnimportedPackages": true, // 未完成的包会自动补全
+    "go.inferGopath": true, // 让编辑器自动推断 GOPATH(包含全局的GOPATH，并沿着当前文件向上找到src目录)
+    "go.docsTool": "gogetdoc", // 使用gogetdoc获取方法和类的签名帮助信息
+    "go.formatTool": "goimports", // 指定代码格式化工具，其他的如gofmt goreturns goformat
+    "go.gotoSymbol.includeImports": true, //不排除导入语句
+    "go.useCodeSnippetsOnFunctionSuggest": true, // 使用代码片段提示，一会会继续说Snippets
+    "go.useCodeSnippetsOnFunctionSuggestWithoutType": true,
+    "go.lintTool": "golangci-lint", // 代码静态检查工具，其他的如gometalinter golint revive staticcheck
+    "go.gotoSymbol.includeGoroot": true, // 在工作空间进行符号搜索文件时(Shift+cOMMAND+O, #开头)包含位于GOROOT里面的标准库
+    "go.gopath": "/Users/liyafeng/.gvm/pkgsets/go1.13/global",
+    "go.goroot": "/Users/liyafeng/.gvm/gos/go1.13",
+    "go.toolsGopath": "/Users/liyafeng/.gvm/pkgsets/go1.13/global",
+    "go.liveErrors": {
+        "enabled": true,
+        "delay": 0
+    },
+    "go.testFlags": [
+        "-v", //go test显示打印日志
+        "-count=1" //禁用缓存
+    ],
+    "gopls": { //参考gopls配置：https://github.com/golang/tools/blob/master/gopls/doc/vscode.md
+        "usePlaceholders": true,
+        "staticcheck": false,
+    },
+    "go.languageServerFlags": [
+        "-rpc.trace",
+        "serve",
+        "--debug=localhost:6060",
+    ]
+}
